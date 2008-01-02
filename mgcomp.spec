@@ -11,6 +11,7 @@ Group:		Sciences/Computer science
 Source:		ftp://ftp.inria.fr/INRIA/Projects/Atoll/Eric.Clergerie/TAG/%{name}-%{version}.tar.bz2
 Url:		http://atoll.inria.fr/packages/packages.html#mgcomp
 Buildrequires:	dyalog
+Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 mgcomp is a DyALog compiler for Linguistic Meta-Grammars, with some additional
