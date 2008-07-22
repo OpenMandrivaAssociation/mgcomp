@@ -1,6 +1,6 @@
 %define name	mgcomp
 %define version 1.4.1
-%define release %mkrel 3
+%define release %mkrel 4
 
 Name:		%{name}
 Version:	%{version}
