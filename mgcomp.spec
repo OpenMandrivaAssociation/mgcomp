@@ -1,6 +1,6 @@
 %define name	mgcomp
-%define version 1.4.1
-%define release %mkrel 6
+%define version 1.4.3
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -8,8 +8,9 @@ Release:	%{release}
 Summary:	DyALog compiler for Linguistic Meta-Grammars
 License:	GPL
 Group:		Sciences/Computer science
-Source:		ftp://ftp.inria.fr/INRIA/Projects/Atoll/Eric.Clergerie/TAG/%{name}-%{version}.tar.bz2
-Url:		http://atoll.inria.fr/packages/packages.html#mgcomp
+Url:		http://alpage.inria.fr/catalogue.en.html#mgcomp
+Source:		https://gforge.inria.fr/frs/download.php/4346/%{name}-%{version}.tar.gz
+Patch0:     mgcomp-1.4.3-fix-dyalog-test.patch
 Buildrequires:	dyalog
 Buildroot:	%{_tmppath}/%{name}-%{version}
 # (tv) depends on dyalog which is ia32 only:
@@ -21,11 +22,11 @@ files for a full processing chain.
 
 %prep
 %setup -q
+%patch0 -p 1
 
 %build
-export LDFLAGS=-L%{_libdir}/DyAlog
-%configure
-%make
+%configure2_5x
+make
 
 %install
 rm -rf %{buildroot}
@@ -36,6 +37,6 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc INSTALL LICENSE NEWS README
+%doc INSTALL LICENSE README
 %{_bindir}/*
-
+%{_libdir}/pkgconfig/mgcomp.pc
