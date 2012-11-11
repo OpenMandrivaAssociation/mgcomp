@@ -1,0 +1,14 @@
+diff -Naur -x '*~' mgcomp-1.4.3/configure mgcomp-1.4.3-fix-dyalog-test/configure
+--- mgcomp-1.4.3/configure	2008-04-01 15:08:11.000000000 +0200
++++ mgcomp-1.4.3-fix-dyalog-test/configure	2010-01-17 00:39:24.000000000 +0100
+@@ -5998,6 +5998,10 @@
+ #include <stdio.h>
+ #include <libdyalog.h>
+ 
++int main_directive_initialization()
++{
++}
++
+ int
+ main_initialization() /* libdyalog already defines main */
+ {
