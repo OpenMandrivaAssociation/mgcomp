@@ -8,7 +8,7 @@ Release:	%{release}
 Summary:	DyALog compiler for Linguistic Meta-Grammars
 License:	GPL
 Group:		Sciences/Computer science
-Url:		http://alpage.inria.fr/catalogue.en.html#mgcomp
+Url:		https://alpage.inria.fr/catalogue.en.html#mgcomp
 Source:		https://gforge.inria.fr/frs/download.php/4346/%{name}-%{version}.tar.gz
 Patch0:     mgcomp-1.4.3-fix-dyalog-test.patch
 Buildrequires:	dyalog
