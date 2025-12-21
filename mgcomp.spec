@@ -11,6 +11,11 @@ Group:		Sciences/Computer science
 Url:		https://alpage.inria.fr/catalogue.en.html#mgcomp
 Source:		https://gforge.inria.fr/frs/download.php/4346/%{name}-%{version}.tar.gz
 Patch0:     mgcomp-1.4.3-fix-dyalog-test.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 Buildrequires:	dyalog
 Buildroot:	%{_tmppath}/%{name}-%{version}
 # (tv) depends on dyalog which is ia32 only:
